@@ -17,7 +17,7 @@ namespace Minimal_Api1.Endpoints
         public static void MapActions(WebApplication app)
         {
             // --------------------------------
-            app.MapPost("/AuthUser", [AllowAnonymous] async (
+            app.MapPost("/RegisterUser", [AllowAnonymous] async (
                 SignInManager<IdentityUser> signInManager,
                 UserManager<IdentityUser> userManager,
                 IOptions<AppJwtSettings> options,
@@ -57,7 +57,7 @@ namespace Minimal_Api1.Endpoints
                   .WithTags("User");
 
             // --------------------------------
-            app.MapPost("/login", [AllowAnonymous] async (
+            app.MapPost("/Login", [AllowAnonymous] async (
                 SignInManager<IdentityUser> signInManager,
                 UserManager<IdentityUser> userManager,
                 IOptions<AppJwtSettings> options,
