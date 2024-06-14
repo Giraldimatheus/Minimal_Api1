@@ -1,0 +1,11 @@
+Add-Migration AuthInitial -Context NetDevPackAppDbContext
+
+ Update-Database -Context NetDevPackAppDbContext
+
+
+
+{
+  "email": "user@example.com",
+  "password": "String123*",
+  "confirmPassword": "String123*"
+}

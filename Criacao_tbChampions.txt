@@ -1,0 +1,20 @@
+-- Table: public.tb_champions
+
+-- DROP TABLE IF EXISTS public.tb_champions;
+
+CREATE TABLE IF NOT EXISTS public.tb_champions
+(
+    "Id" integer NOT NULL DEFAULT nextval('"tb_champions_Id_seq"'::regclass),
+    champion_name text COLLATE pg_catalog."default",
+    roles text COLLATE pg_catalog."default",
+    base_health text COLLATE pg_catalog."default",
+    base_mana text COLLATE pg_catalog."default",
+    base_armor text COLLATE pg_catalog."default",
+    base_attack_damage text COLLATE pg_catalog."default",
+    gold_efficiency text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.tb_champions
+    OWNER to postgres;
